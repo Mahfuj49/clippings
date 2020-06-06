@@ -1,0 +1,25 @@
+.header {
+    padding: 0 6rem;
+    position: relative;
+    height: 100vh;
+    background-image: url(https://uploads-ssl.webflow.com/5e3c4cb20c77519bae9c7017/5e7a3fce1de2797570d27826_hero-gubi.jpg);
+    background-size: auto 90%;
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    &__text {
+        position: absolute;
+        max-width: 65rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__para {
+        width: 45rem;
+        line-height: 1.5;
+
+        @include respond(tab-land) {
+            color: $background-black;
+        }
+    }
+}

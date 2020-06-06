@@ -1,0 +1,47 @@
+.display {
+    position: relative;
+    top: -15%;
+    width: 60%;
+    height: 64rem;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 1px 100px 0 rgba(0,0,0,.16);
+    z-index: 1000;
+
+    background-image: url(https://uploads-ssl.webflow.com/5e3c4cb20c77519bae9c7017/5e85f6e3cfbbb2379778a0ff_sourcing.jpg);
+    background-color: $background-white;
+    background-size: auto 100%;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    @include respond(tab-land) {
+        top: -12%;
+        width: 80%;
+    }
+
+    @include respond(phone) {
+        width: 90%;
+        height: 100rem;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    &__bar {
+        height: 3.6rem;
+        width: 100%;
+        background-color: hsla(0,0%,96.1%,.8);
+        backdrop-filter: blur(10px);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    &__btn {
+        font-size: 4.5rem;
+        line-height: .8;
+        padding: 0 1rem;
+        opacity: .5;
+        letter-spacing: -3px;
+    }
+}

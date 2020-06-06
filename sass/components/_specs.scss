@@ -1,0 +1,40 @@
+.specs {
+    text-align: center;
+    height: auto;
+
+    &__icon {
+        display: block;
+        font-size: 4rem;
+        font-weight: 600;
+
+        &--dark {
+            color: $color-text-dark;
+        }
+
+        &--white {
+            color: $background-white;
+        }
+    }
+
+    &__heading {
+        display: block;
+        
+        &--dark {
+            color: $color-text-dark;
+        }
+
+        &--white {
+            color: $background-white;
+        }
+    }
+
+    &__para {
+        &--white {
+            color: $background-white;
+        }
+
+        @include respond(phone) {
+            padding: 0 0 5rem 0;
+        }
+    }
+}

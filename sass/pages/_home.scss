@@ -1,0 +1,275 @@
+.section-features {
+    padding: 6rem 5rem;
+
+    &__header-text {
+        display: block;
+        font-weight: 700;
+        color: $color-text-light;
+    }
+}
+
+.section-platform {
+    margin: 6rem auto;
+    max-width: 145rem;
+    height: 55rem;
+    @include clearfix;
+
+    &__details {
+        padding: 8rem 6rem;
+        float: left;
+        display: inline-block;
+        width: 50%;
+        height: 55rem;
+        background-color: $color-text-creem;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        width: 50%;
+        height: 55rem;
+        float: right;
+        background-image: url(../img/platform.jpg);
+        background-size: cover;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+
+    @include respond(tab-port) {
+        height: auto;
+    }
+}
+
+.section-specs {
+    padding: 3rem 0;
+}
+
+.section-works {
+    padding: 7rem 0;
+    border-top: .02px solid $color-text;
+    border-bottom: .02px solid $color-text;
+
+    @include respond(phone) {
+        text-align: center;
+    }
+
+    &__heading {
+        color: $color-text-dark;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__txt {
+        display: block;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1.2;
+
+        &--1 {
+            color:$color-text-dark;
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
+
+.section-sourcing {
+    padding: 6rem 0 25rem 0;
+    text-align: center;
+
+    @include respond(phone) {
+        padding: 8rem 0 ;
+    }
+
+    &__txt {
+        font-weight: 600;
+    }
+
+    &__img {
+        display: block;
+        position: relative;
+        width: 72rem;
+        margin: 0 auto;
+        border-radius: 8px;
+
+        @include respond(phone) {
+            width: 100%;
+            border-radius: 0;
+        }
+    }
+
+    &:last-child {
+        padding: 6rem 0;
+        border-top: 0.02px solid $background-black;
+    }
+}
+
+.section-display {
+    position: relative;
+    height: 117rem;
+    background-color: $background-black;
+    z-index: -5;
+
+    @include respond(phone) {
+        height: auto;
+    }
+
+    &__ptn-logo {
+        width: 100%;
+
+        @include respond(phone) {
+            display: block;
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
+
+    &__partners {
+        position: relative;
+        top: -12%;
+
+        @include respond(tab-land) {
+            top: -10%;
+        }
+    }
+
+    &__more {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        font-size: 3rem;
+        transform: translateY(4rem);
+        color: $background-white;
+    }
+
+    &__specs {
+        position: relative;
+        top: -8%;
+        padding: 6rem 0;
+        border-top: .08px solid $background-white;
+    }
+    
+}
+
+.section-services {
+    margin: 0 auto;
+    max-width: 145rem;
+    height: 55rem;
+    @include clearfix;
+
+    &__details {
+        position: relative;
+        top: -15%;
+        padding: 8rem 6rem;
+        float: left;
+        display: inline-block;
+        width: 50%;
+        height: 55rem;
+        background-color: $color-text-creem;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+
+    &__composition {
+        position: relative;
+        top: -15%;
+        width: 50%;
+        height: 55rem;
+        float: right;
+        background-color: $color-text-creem;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        border-radius: 5px;
+
+        &--1 {
+            right: 50%;
+            top: 50%;
+            width: auto;
+            height: 40%;
+            z-index: 10;
+            box-shadow: 3px 3px 20px 0 rgba(0,0,0,.1);
+
+            @include respond(tab-port) {
+                height: 60%;
+                top: 40%;
+            }
+        }
+
+        &--2 {
+            right: 5%;
+            top: 15%;
+            width: auto;
+            height: 65%;
+
+            @include respond(tab-port) {
+                height: 100%;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+
+    @include respond(tab-port) {
+        height: auto;
+    }
+}
+
+.section-services-2 {
+    margin: 0 auto;
+    max-width: 145rem;
+    height: 55rem;
+    @include clearfix;
+
+    &__details {
+        position: relative;
+        top: -15%;
+        padding: 8rem 6rem;
+        float: right;
+        display: inline-block;
+        width: 50%;
+        height: 55rem;
+        background-color: $background-black;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        position: relative;
+        top: -15%;
+        width: 50%;
+        height: 55rem;
+        float: left;
+        background-image: url(https://uploads-ssl.webflow.com/5e3c4cb20c77519bae9c7017/5e7ce2c57fe14d5b54172e05_giorgia.jpg);
+        background-size: cover;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+
+    @include respond(tab-port) {
+        height: auto;
+    }
+}

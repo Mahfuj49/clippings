@@ -1,0 +1,19 @@
+.btn {
+    &:link,
+    &:visited {
+        display: inline-block;
+        text-decoration: none;
+        padding: 1.5rem 3rem;
+        border-radius: 50px;
+        font-weight: 600;
+    }
+
+    &--black {
+        background-color: #000;
+        color: white;
+    }
+
+    &--transparent {
+        color: $color-text-dark;
+    }
+}
