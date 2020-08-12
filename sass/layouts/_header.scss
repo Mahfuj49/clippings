@@ -7,6 +7,12 @@
     background-repeat: no-repeat;
     background-position: right top;
 
+    &__mobologo {
+        position: relative;
+        top: 2rem;
+        width: 12.4rem;
+    }
+
     &__text {
         position: absolute;
         max-width: 65rem;
@@ -20,6 +26,10 @@
 
         @include respond(tab-land) {
             color: $background-black;
+        }
+
+        @include respond(phone) {
+            width: 35rem;
         }
     }
 }

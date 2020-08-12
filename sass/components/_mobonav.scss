@@ -1,0 +1,119 @@
+.mobonav {
+
+    &__spot {
+        position: fixed;
+        top: 3rem;
+        right: 3rem;
+        height: 3rem;
+        width: 3rem;
+    }
+
+    &__button {
+        cursor: pointer;
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        height: 5rem;
+        width: 5rem;
+        background-color: transparent;
+        z-index: 3000;
+        border-radius: 50%;
+        box-shadow: 0 .5px 10px $background-black;
+        text-align: center;
+    }
+
+    &__background {
+        position: fixed;
+        top: 2.21rem;
+        right: 2.21rem;
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 50%;
+        background-image: radial-gradient($background-white,$color-text-creem);
+        z-index: 2000;
+    }
+
+    &__list {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3000;
+        list-style: none;
+    }
+
+    &__item {
+        text-align: center;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        padding: 1.5rem 10rem;
+        border: .8px solid $background-black;
+        margin: 1rem 0;
+
+        &:hover,
+        &:active {
+            transform: translateX(1.5rem);
+            transition: transform 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        }
+    }
+
+    ///FUNCTIONALUTY
+
+    &__spot:checked ~ &__background {
+        transform: scale(80);
+        transition: transform 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+    }
+
+    &__logo {
+        position: relative;
+        margin-top: 2.5rem;
+
+        &,
+        &::before,
+        &::after {
+            display: inline-block;
+            height: .2rem;
+            width: 3rem;
+            background-color: $background-black;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+        }
+
+        &::before { top: .8rem; }
+
+        &::after { top: -.8rem; }
+    }
+
+    &__spot:checked + &__button &__logo::before,
+    &__spot:checked + &__button &__logo::after {
+        top: 0;
+        transition: all .2s ease;
+    }
+
+    &__spot:checked + &__button &__logo::before {
+        transform: rotate(-135deg);
+    }
+
+    &__spot:checked + &__button &__logo::after {
+        transform: rotate(135deg);
+    }
+
+    &__spot:checked + &__button &__logo {
+        background-color: transparent;
+        transition: all .2s ease;
+    }
+
+    &__spot:checked ~ &__list {
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+    }
+
+}

@@ -120,6 +120,7 @@ body {
     width: 70%; }
 
 .navbar {
+  display: none;
   position: fixed;
   top: 0;
   width: 100%;
@@ -172,6 +173,98 @@ body {
   @media (max-width: 37.5em) {
     .specs__para {
       padding: 0 0 5rem 0; } }
+
+.mobonav__spot {
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  height: 3rem;
+  width: 3rem; }
+
+.mobonav__button {
+  cursor: pointer;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  height: 5rem;
+  width: 5rem;
+  background-color: transparent;
+  z-index: 3000;
+  border-radius: 50%;
+  box-shadow: 0 0.5px 10px #232323;
+  text-align: center; }
+
+.mobonav__background {
+  position: fixed;
+  top: 2.21rem;
+  right: 2.21rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+  background-image: radial-gradient(#fff, #f3ede9);
+  z-index: 2000; }
+
+.mobonav__list {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3000;
+  list-style: none; }
+
+.mobonav__item {
+  text-align: center;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding: 1.5rem 10rem;
+  border: 0.8px solid #232323;
+  margin: 1rem 0; }
+  .mobonav__item:hover, .mobonav__item:active {
+    transform: translateX(1.5rem);
+    transition: transform 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
+
+.mobonav__spot:checked ~ .mobonav__background {
+  transform: scale(80);
+  transition: transform 0.6s cubic-bezier(0.87, 0, 0.13, 1); }
+
+.mobonav__logo {
+  position: relative;
+  margin-top: 2.5rem; }
+  .mobonav__logo, .mobonav__logo::before, .mobonav__logo::after {
+    display: inline-block;
+    height: .2rem;
+    width: 3rem;
+    background-color: #232323; }
+  .mobonav__logo::before, .mobonav__logo::after {
+    content: "";
+    position: absolute;
+    left: 0; }
+  .mobonav__logo::before {
+    top: .8rem; }
+  .mobonav__logo::after {
+    top: -.8rem; }
+
+.mobonav__spot:checked + .mobonav__button .mobonav__logo::before,
+.mobonav__spot:checked + .mobonav__button .mobonav__logo::after {
+  top: 0;
+  transition: all .2s ease; }
+
+.mobonav__spot:checked + .mobonav__button .mobonav__logo::before {
+  transform: rotate(-135deg); }
+
+.mobonav__spot:checked + .mobonav__button .mobonav__logo::after {
+  transform: rotate(135deg); }
+
+.mobonav__spot:checked + .mobonav__button .mobonav__logo {
+  background-color: transparent;
+  transition: all .2s ease; }
+
+.mobonav__spot:checked ~ .mobonav__list {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1); }
 
 .footer {
   width: 100%;
@@ -244,6 +337,10 @@ body {
   background-size: auto 90%;
   background-repeat: no-repeat;
   background-position: right top; }
+  .header__mobologo {
+    position: relative;
+    top: 2rem;
+    width: 12.4rem; }
   .header__text {
     position: absolute;
     max-width: 65rem;
@@ -255,6 +352,9 @@ body {
     @media (max-width: 75em) {
       .header__para {
         color: #232323; } }
+    @media (max-width: 37.5em) {
+      .header__para {
+        width: 35rem; } }
 
 .section-features {
   padding: 6rem 5rem; }

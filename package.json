@@ -1,5 +1,5 @@
 {
-  "name": "kvisanid",
+  "name": "clippings",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,10 +7,18 @@
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "watch:sass": "nodemon -e scss -x \"npm run compile:sass\""
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mahfuj49/clippings.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mahfuj49/clippings/issues"
+  },
+  "homepage": "https://github.com/Mahfuj49/clippings#readme",
   "devDependencies": {
     "node-sass": "^4.14.1",
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.4"
   }
 }
